@@ -1,0 +1,59 @@
+<mat-card class="example-card" *ngIf="anime !== undefined">
+    <mat-card-header>
+        <mat-card-title>{{anime.title}}</mat-card-title>
+        <mat-card-subtitle>{{anime.rating}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="anime.image_url" alt={{anime.title}}>
+    <mat-card-content>
+        <mat-tab-group [color]="'accent'" [backgroundColor]="'primary'">
+            <mat-tab label="Synopsis">
+                <blockquote style="text-align: left;">
+                    {{anime.synopsis}}
+                </blockquote>
+            </mat-tab>
+            <mat-tab label="Background">
+                <blockquote style="text-align: left;">
+                    {{anime.background}}
+                </blockquote>
+            </mat-tab>
+            <mat-tab label="Information">
+                <blockquote style="text-align: center;">
+                   <strong>Type:</strong> {{anime.type}}
+                </blockquote>
+                <blockquote style="text-align: center;">
+                   <strong>Score:</strong> {{anime.score}}
+                </blockquote>
+                <blockquote style="text-align: center;">
+                   <strong>Episodes:</strong> {{anime.episodes}}
+                </blockquote>
+                <blockquote style="text-align: center;">
+                   <strong>Rank:</strong> {{anime.rank}}
+                </blockquote>
+                <blockquote style="text-align: center;">
+                   <strong>Status:</strong> {{anime.status}}
+                </blockquote>
+                <blockquote style="text-align: center;">
+                    <strong>Popularity:</strong> {{anime.popularity}}
+                 </blockquote>
+                 <blockquote style="text-align: center;">
+                    <strong>Members:</strong> {{anime.members}}
+                 </blockquote>
+            </mat-tab>
+            <mat-tab label="Trailer">
+                <blockquote style="text-align: center;">
+                    <iframe width="500" height="315" [src]="anime.trailer_url | safe">
+                    </iframe>
+                </blockquote>
+            </mat-tab>
+            <mat-tab label="Episodes">
+                <mat-card class="example-card" *ngFor="let episode of listaVideos">
+                    <mat-card-title-group>
+                      <mat-card-title>{{episode.title}}</mat-card-title>
+                      <mat-card-subtitle>{{episode.episode}}</mat-card-subtitle>
+                      <img mat-card-sm-image [src]="episode.image_url" >
+                    </mat-card-title-group>
+                  </mat-card>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card-content>
+</mat-card>

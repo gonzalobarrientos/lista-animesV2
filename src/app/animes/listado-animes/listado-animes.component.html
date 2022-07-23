@@ -1,0 +1,38 @@
+<form class="example-form">
+    <div style="width: 100%;">
+        <!-- Search gem for name: <input type="text" [(ngModel)]="filtro" name="filtro"> -->
+        <table class="example-full-width center" cellspacing="0">
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Búsqueda de Animes</mat-label>
+                        <input matInput [(ngModel)]="filtro" name="filtro">
+                    </mat-form-field>
+                </td>
+                <!-- <td>
+                    <button mat-raised-button color="primary" (click)="buscarAnimes()">Buscar</button>
+                </td> -->
+            </tr>
+        </table>
+        <table class="example-full-width center" cellspacing="0">
+            <tr>
+                <td>
+                    <div class="card" *ngFor="let anime of (listaAnimes | filtroAnimes:filtro)">
+                        <mat-card class="example-card" (click)="verDetalle(anime)">
+                            <mat-card-header>
+                                <mat-card-title>{{ anime.title }}</mat-card-title>
+                                <!-- <mat-card-subtitle> {{ anime.synopsis }} </mat-card-subtitle> -->
+                            </mat-card-header>
+                            <img mat-card-image [src]="anime.image_url" alt="anime">
+                            <mat-card-content>
+                                <p>
+                                    {{ anime.synopsis }}
+                                </p>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>

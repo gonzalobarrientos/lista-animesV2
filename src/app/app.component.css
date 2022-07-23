@@ -1,0 +1,53 @@
+main > mat-card {
+    margin: 1rem;
+  }
+
+  .example-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    min-width: 100%;
+  }
+
+  .example-main{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    width: 75%;
+    max-width: 1080px;
+    margin: auto;
+  }
+
+  .docs-header-background{
+    content: "";
+    position: absolute;
+    /* background-image: url(angular-white-transparent.6504667….svg); */
+    background-size: 600px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-position: 80% 20px;
+    opacity: .2;
+  }
+
+  .docs-header-section{
+    width: 90%;
+    position: absolute;
+    z-index: 0;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .docs-header-headline{
+    color: #fff;
+  }
+  .mat-h1{
+    font: 400 24px/32px Roboto,Helvetica Neue,sans-serif;
+    letter-spacing: normal;
+    margin: 0 0 16px;
+  }
