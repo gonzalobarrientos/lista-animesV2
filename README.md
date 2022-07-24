@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Como ejecutar
+
+Abrir https://cors-anywhere.herokuapp.com/https://api.jikan.moe/v3/search/anime?q=&page=1&order_by=score&sort=desc
+para habilitar cors, por la API externa. Luego recargar la pagina para que cargue correctamente.
+

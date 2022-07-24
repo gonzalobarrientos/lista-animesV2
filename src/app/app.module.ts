@@ -7,6 +7,10 @@ import { AnimesModule } from './animes/animes.module';
 
 import { MatCardModule } from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
+
 import { TitleDirective } from './animes/compartido/title.directive';
 
 
@@ -20,7 +24,10 @@ import { TitleDirective } from './animes/compartido/title.directive';
     AppRoutingModule,
     AnimesModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatIconModule,
+    MatMenuModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

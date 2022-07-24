@@ -1,10 +1,26 @@
 <div class="example-container">
     <mat-toolbar color="primary">
         <mat-toolbar-row>
-            <span appTitle>Listado de animes de la temporada actual</span>
+            <span class="fill-remaining-space">
+                <button mat-icon-button [matMenuTriggerFor]="menu">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu" [overlapTrigger]="false">
+                    <button mat-menu-item [routerLink]="['/inicio']">
+                        <mat-icon>home</mat-icon>
+                        <span>Home</span>
+                    </button>
+                </mat-menu>
+            </span>
+            <span appTitle class="fill-remaining-space">Listado de animes</span>
         </mat-toolbar-row>
     </mat-toolbar>
     <main class="example-main">
         <router-outlet></router-outlet>
     </main>
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            <span class="fill-remaining-space"></span>
+        </mat-toolbar-row>
+    </mat-toolbar>
 </div>

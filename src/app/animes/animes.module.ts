@@ -17,6 +17,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 import {MatButtonModule} from '@angular/material/button';
 import { SafePipe } from './compartido/safe.pipe';
 import {MatListModule} from '@angular/material/list';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 @NgModule({
   declarations: [
     AnimesComponent,
@@ -34,7 +36,8 @@ import {MatListModule} from '@angular/material/list';
     MatInputModule,
     MatTabsModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    MatGridListModule
   ],
   exports: [
     AnimesComponent

@@ -9,7 +9,7 @@ main > mat-card {
     min-width: 100%;
   }
 
-  .example-main{
+  /*.example-main{
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -17,6 +17,16 @@ main > mat-card {
     width: 75%;
     max-width: 1080px;
     margin: auto;
+  }*/
+
+    .example-main{
+    /* align-items: center; */
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    width: 100%;
+    /* max-width: 1080px; */
+    /* margin: auto; */
   }
 
   .docs-header-background{
@@ -50,4 +60,9 @@ main > mat-card {
     font: 400 24px/32px Roboto,Helvetica Neue,sans-serif;
     letter-spacing: normal;
     margin: 0 0 16px;
+  }
+  .fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
   }
