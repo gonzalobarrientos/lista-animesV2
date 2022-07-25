@@ -24,7 +24,7 @@ main > mat-card {
     display: flex;
     flex-direction: column;
     padding: 16px;
-    width: 100%;
+    width: 95%;
     /* max-width: 1080px; */
     /* margin: auto; */
   }

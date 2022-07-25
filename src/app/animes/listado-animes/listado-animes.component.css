@@ -1,6 +1,7 @@
-.example-card {
+/* .example-card {
     max-width: 400px;
-  }
+    margin-bottom: 8px;
+  } */
 
   .card {
     padding-bottom: 1rem;
@@ -20,4 +21,20 @@
 }
 td {
   padding-right: 8px;
+}
+
+mat-card {
+  width: calc(100% - 70px);
+  height: calc(100% - 70px);
+  max-width: 320px;
+  margin-bottom: 8px;
+}
+.example-main2{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  width: 75%;
+  max-width: 1080px;
+  margin: auto;
 }
