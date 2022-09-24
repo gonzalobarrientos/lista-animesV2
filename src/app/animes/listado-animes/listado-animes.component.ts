@@ -26,7 +26,8 @@ export class ListadoAnimesComponent implements OnInit {
 
   obtenerAnimes(): void {
     this.animesService.obtenerAnimes().subscribe((data: Ianimes) => {
-      this.listaAnimes = data.results;
+      // this.listaAnimes = data.results;
+      this.listaAnimes = data.data;
     });
   }
   verDetalle(anime: Ireview) {

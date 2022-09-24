@@ -1,7 +1,10 @@
+import { Itrailer } from "./itrailer";
+import { IJPG } from "./i-jpg";
+
 export interface Ianime {
     mal_id: number;
     synopsis: string;
-    image_url: string;
+    images: IJPG;
     title: string;
     type: string;
     episodes: number;
@@ -9,7 +12,7 @@ export interface Ianime {
     rating: string;
     score: string;
     background:string;
-    trailer_url: string;
+    trailer: Itrailer;
     rank: number;
     popularity: number;
     members: number;

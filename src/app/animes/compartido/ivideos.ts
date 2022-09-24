@@ -1,5 +1,5 @@
 import { Iepisodios } from './iepisodios';
 
 export interface Ivideos {
-    episodes: Iepisodios[];
+    data: Iepisodios[];
 }

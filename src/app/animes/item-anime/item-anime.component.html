@@ -1,48 +1,48 @@
 <div class="example-main2">
     <mat-card class="example-card" *ngIf="anime !== undefined">
         <mat-card-header>
-            <mat-card-title>{{anime.title}}</mat-card-title>
-            <mat-card-subtitle>{{anime.rating}}</mat-card-subtitle>
+            <mat-card-title>{{anime.data.title}}</mat-card-title>
+            <mat-card-subtitle>{{anime.data.rating}}</mat-card-subtitle>
         </mat-card-header>
-        <img mat-card-image [src]="anime.image_url" alt={{anime.title}}>
+        <img mat-card-image [src]="anime.data.images.jpg.large_image_url" alt={{anime.title}}>
         <mat-card-content>
             <mat-tab-group [color]="'accent'" [backgroundColor]="'primary'">
                 <mat-tab label="Synopsis">
                     <blockquote style="text-align: left;">
-                        {{anime.synopsis}}
+                        {{anime.data.synopsis}}
                     </blockquote>
                 </mat-tab>
                 <mat-tab label="Background">
                     <blockquote style="text-align: left;">
-                        {{anime.background}}
+                        {{anime.data.background}}
                     </blockquote>
                 </mat-tab>
                 <mat-tab label="Information">
                     <blockquote style="text-align: center;">
-                        <strong>Type:</strong> {{anime.type}}
+                        <strong>Type:</strong> {{anime.data.type}}
                     </blockquote>
                     <blockquote style="text-align: center;">
-                        <strong>Score:</strong> {{anime.score}}
+                        <strong>Score:</strong> {{anime.data.score}}
                     </blockquote>
                     <blockquote style="text-align: center;">
-                        <strong>Episodes:</strong> {{anime.episodes}}
+                        <strong>Episodes:</strong> {{anime.data.episodes}}
                     </blockquote>
                     <blockquote style="text-align: center;">
-                        <strong>Rank:</strong> {{anime.rank}}
+                        <strong>Rank:</strong> {{anime.data.rank}}
                     </blockquote>
                     <blockquote style="text-align: center;">
-                        <strong>Status:</strong> {{anime.status}}
+                        <strong>Status:</strong> {{anime.data.status}}
                     </blockquote>
                     <blockquote style="text-align: center;">
-                        <strong>Popularity:</strong> {{anime.popularity}}
+                        <strong>Popularity:</strong> {{anime.data.popularity}}
                     </blockquote>
                     <blockquote style="text-align: center;">
-                        <strong>Members:</strong> {{anime.members}}
+                        <strong>Members:</strong> {{anime.data.members}}
                     </blockquote>
                 </mat-tab>
                 <mat-tab label="Trailer">
                     <blockquote style="text-align: center;">
-                        <iframe width="500" height="315" [src]="anime.trailer_url | safe">
+                        <iframe width="500" height="315" [src]="anime.data.trailer.embed_url | safe">
                         </iframe>
                     </blockquote>
                 </mat-tab>
@@ -50,8 +50,8 @@
                     <mat-card class="example-card" *ngFor="let episode of listaVideos">
                         <mat-card-title-group>
                             <mat-card-title>{{episode.title}}</mat-card-title>
-                            <mat-card-subtitle>{{episode.episode}}</mat-card-subtitle>
-                            <img mat-card-sm-image [src]="episode.image_url">
+                            <mat-card-subtitle>{{episode.mal_id}}</mat-card-subtitle>
+                            <img mat-card-sm-image [src]="episode.url">
                         </mat-card-title-group>
                     </mat-card>
                 </mat-tab>

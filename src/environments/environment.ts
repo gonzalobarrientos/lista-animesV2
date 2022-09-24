@@ -6,17 +6,11 @@ export const environment = {
   production: false,
   protocolo: "https://cors-anywhere.herokuapp.com/https",
   //protocolo: "https",
-  hostname: "api.jikan.moe/v3",
+  hostname: "api.jikan.moe/v4",
   recursoBusqueda: "/search",
   recursoAnime:"/anime"
 };
-export const environment2 = {
-  production: false,
-  protocolo: "http",
-  puerto: "3000",
-  hostname: "localhost",
-  recurso: "/gemas"
-};
+
 
 /*
  * For easier debugging in development mode, you can import the following file

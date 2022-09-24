@@ -1,5 +1,5 @@
 export interface Iepisodios {
     title: string;
-    episode: string;
-    image_url: string;
+    mal_id: number;
+    url: string;
 }

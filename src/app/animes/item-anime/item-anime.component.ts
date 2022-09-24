@@ -12,7 +12,7 @@ import { Iepisodios } from '../compartido/iepisodios';
 })
 export class ItemAnimeComponent implements OnInit {
 
-  anime: any;
+  anime: Ianime;
   listaVideos: Iepisodios[];
   constructor(
     private animesService: AnimesService,
@@ -27,12 +27,13 @@ export class ItemAnimeComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     this.animesService.obtenerDetalle(id).subscribe((data: Ianime) => {
       this.anime = data;
+      console.log(data.background);
     });
   }
   obtenerVideos(){
     const id = this.route.snapshot.paramMap.get('id');
     this.animesService.obtenerVideos(id).subscribe((data: Ivideos) => {
-      this.listaVideos = data.episodes;
+      this.listaVideos = data.data;
   });
   }
 }

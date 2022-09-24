@@ -1,7 +1,9 @@
+import { IJPG } from "./i-jpg";
+
 export interface Ireview {
     mal_id: number;
     title?: string;
     synopsis?: string;
-    image_url: string;
+    images: IJPG;
     score: number;
 }

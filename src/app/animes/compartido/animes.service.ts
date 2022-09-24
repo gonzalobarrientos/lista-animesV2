@@ -16,7 +16,8 @@ export class AnimesService {
   constructor(private http: HttpClient) { }
 
   obtenerAnimes(): Observable<Ianimes> {
-    const recurso: string = environment.recursoBusqueda + environment.recursoAnime;
+    // const recurso: string = environment.recursoBusqueda + environment.recursoAnime;
+    const recurso: string = environment.recursoAnime;
     const urlServicio: string = this.url + recurso;
 
     let params = new HttpParams()
@@ -50,7 +51,7 @@ export class AnimesService {
 
   obtenerVideos(id: string): Observable<Ivideos> {
     const recurso: string = environment.recursoAnime;
-    const urlServicio: string = this.url + recurso + "/" + id + "/" + "videos";
+    const urlServicio: string = this.url + recurso + "/" + id + "/" + "episodes";
 
     let headers = new HttpHeaders()
     .set("Access-Control-Allow-Origin", "*")
