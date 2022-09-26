@@ -14,6 +14,7 @@ export class ItemAnimeComponent implements OnInit {
 
   anime: Ianime;
   listaVideos: Iepisodios[];
+
   constructor(
     private animesService: AnimesService,
     private route: ActivatedRoute
@@ -32,7 +33,7 @@ export class ItemAnimeComponent implements OnInit {
   }
   obtenerVideos(){
     const id = this.route.snapshot.paramMap.get('id');
-    this.animesService.obtenerVideos(id).subscribe((data: Ivideos) => {
+    this.animesService.obtenerVideos(id,"1").subscribe((data: Ivideos) => {
       this.listaVideos = data.data;
   });
   }

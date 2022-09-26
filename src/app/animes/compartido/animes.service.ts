@@ -49,16 +49,19 @@ export class AnimesService {
     }));
   }
 
-  obtenerVideos(id: string): Observable<Ivideos> {
+  obtenerVideos(id: string, page: string): Observable<Ivideos> {
     const recurso: string = environment.recursoAnime;
-    const urlServicio: string = this.url + recurso + "/" + id + "/" + "episodes";
+    const urlServicio: string = this.url + recurso + "/" + id + "/" + "videos" + "/" + "episodes";
+
+    let params = new HttpParams()
+    .set("page",page)
 
     let headers = new HttpHeaders()
     .set("Access-Control-Allow-Origin", "*")
     .set("Access-Control-Allow-Methods", "DELETE, POST, GET, OPTIONS, PUT")
     .set("Access-Control-Allow-Headers", "append,delete,entries,foreach,get,has,keys,set,values,Authorization");
 
-    return this.http.get(urlServicio,{headers:headers}).pipe(map((data: Ivideos) => {
+    return this.http.get(urlServicio,{headers:headers,params: params}).pipe(map((data: Ivideos) => {
       return data;
     }));
   }
