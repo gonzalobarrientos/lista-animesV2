@@ -30,7 +30,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Abrir https://cors-anywhere.herokuapp.com/https://api.jikan.moe/v4/anime?q=&page=1&order_by=score&sort=desc para habilitar cors, por la API externa. Luego recargar la pagina para que cargue correctamente.
 
-[HabilitarCors.png](https://github.com/gonzalobarrientos/lista-animesV2/blob/master/HabilitarCors.png)
+![HabilitarCors]((https://github.com/gonzalobarrientos/lista-animesV2/blob/master/HabilitarCors.png)
 
 
 
