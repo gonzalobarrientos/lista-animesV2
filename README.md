@@ -28,5 +28,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Como ejecutar
 
-Abrir https://cors-anywhere.herokuapp.com/corsdemo para habilitar cors, por la API externa. Luego recargar la pagina para que cargue correctamente.
+Abrir https://cors-anywhere.herokuapp.com/https://api.jikan.moe/v4/anime?q=&page=1&order_by=score&sort=desc para habilitar cors, por la API externa. Luego recargar la pagina para que cargue correctamente.
 
